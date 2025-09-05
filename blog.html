@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - DevOps Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>&lt;/DevOps&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>DevOps Engineering Blog</h1>
+                <p>Technical deep-dives, lessons learned, and practical solutions from real-world DevOps implementations</p>
+            </div>
+        </section>
+
+        <section class="blog-posts">
+            <div class="container">
+                <article class="blog-card featured">
+                    <div class="blog-meta">
+                        <span class="blog-date">Coming Soon</span>
+                        <span class="blog-category">Observability</span>
+                    </div>
+                    <h2>How Instrumenting a Flask API for Prometheus Fixed "Unsupported Content-Type"</h2>
+                    <p>Deep dive into Prometheus metrics exposition format, common Content-Type issues, and how proper instrumentation enabled reliable scraping in production pipelines.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Prometheus</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">Monitoring</span>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">Coming Soon</span>
+                        <span class="blog-category">Security</span>
+                    </div>
+                    <h2>Jenkins Behind HTTPS Reverse Proxy with CSRF Enabled</h2>
+                    <p>Why CSRF protection matters in CI/CD systems and step-by-step configuration of Jenkins with Nginx reverse proxy for production security.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Jenkins</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">Nginx</span>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">Coming Soon</span>
+                        <span class="blog-category">CI/CD</span>
+                    </div>
+                    <h2>Branch Conditions and Webhooks: Debugging CI/CD Stage Skips</h2>
+                    <p>Troubleshooting "skipped due to when conditional" issues in Jenkins pipelines and proper SCM branch detection patterns.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Jenkins</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Webhooks</span>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">Coming Soon</span>
+                        <span class="blog-category">Containers</span>
+                    </div>
+                    <h2>ARM64 vs AMD64 in Container Pipelines</h2>
+                    <p>Build vs runtime architecture mismatches in containerized CI/CD, detection strategies, and resolution approaches for multi-architecture deployments.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Architecture</span>
+                        <span class="tag">CI/CD</span>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">Coming Soon</span>
+                        <span class="blog-category">Strategy</span>
+                    </div>
+                    <h2>Portfolio Hosting Without Cost: Static Sites for DevOps Professionals</h2>
+                    <p>Why static portfolios are the correct asset for DevOps hiring, how Git-driven CI/CD aligns with real workflows, and cost-effective presentation strategies.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Career</span>
+                        <span class="tag">Portfolio</span>
+                        <span class="tag">Static Sites</span>
+                    </div>
+                </article>
+
+                <div class="blog-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Get notified when new technical posts are published. No spam, just quality DevOps content.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DevOps Portfolio. Built with modern web standards and deployed on Cloudflare Pages.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

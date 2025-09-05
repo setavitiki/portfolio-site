@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - DevOps Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>&lt;/DevOps&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>DevOps Projects & Case Studies</h1>
+                <p>Real-world implementations with measurable outcomes, architectural decisions, and lessons learned</p>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="container">
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <h2><i class="fas fa-rocket"></i> TaskFlow – CI/CD to AWS with Observability</h2>
+                        <span class="project-status">Production Ready</span>
+                    </div>
+                    
+                    <div class="project-meta">
+                        <span class="tech-stack">Jenkins • Docker • AWS EC2 • Prometheus • Grafana</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>Problem Statement</h3>
+                        <p>Build a production-style delivery pipeline for a containerized API with automated deploys on commit and operational visibility without persistent cloud cost. Required webhook-driven CI/CD, Dockerized builds, cloud deployment, health checks, and metrics while avoiding 24/7 paid instances.</p>
+
+                        <h3>Solution Architecture</h3>
+                        <div class="architecture-flow">
+                            <div class="flow-step">GitHub Repo</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">Webhook</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">Jenkins Pipeline</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">Docker Build</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">EC2 Deploy</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">Prometheus/Grafana</div>
+                        </div>
+
+                        <h3>Pipeline Highlights</h3>
+                        <ul>
+                            <li>Declarative Jenkinsfile with stages for checkout, lint/test, image build, SSH deploy, and automated health verification</li>
+                            <li>Repository READMEs document commands and reasoning for full reproducibility</li>
+                            <li>Automated rollback capabilities and environment promotion strategies</li>
+                        </ul>
+
+                        <h3>Observability Implementation</h3>
+                        <ul>
+                            <li>Exposed Prometheus metrics in correct text exposition format</li>
+                            <li>Verified target status UP in Prometheus with proper scrape configurations</li>
+                            <li>Built Grafana dashboard panels for request rate, latency, task counts, and app version</li>
+                            <li>Implemented alerting patterns for critical system metrics</li>
+                        </ul>
+
+                        <h3>Key Obstacles & Resolutions</h3>
+                        <div class="obstacles">
+                            <div class="obstacle">
+                                <strong>Webhook 200 but no build:</strong> Root cause was incorrect endpoint and branch conditions; fixed with proper /github-webhook/ route and branch handling.
+                            </div>
+                            <div class="obstacle">
+                                <strong>ARM64/AMD64 mismatch:</strong> Reprovisioned target to ARM64 Amazon Linux 2023 for architecture compatibility.
+                            </div>
+                            <div class="obstacle">
+                                <strong>SSH/variable scoping:</strong> Fixed quoting and environment use for tag/version visibility in remote shell execution.
+                            </div>
+                        </div>
+
+                        <h3>Results</h3>
+                        <div class="results-grid">
+                            <div class="result-item">
+                                <strong>Deployment Time</strong>
+                                <span>Reduced from 45min to 8min</span>
+                            </div>
+                            <div class="result-item">
+                                <strong>Reliability</strong>
+                                <span>99.2% deployment success rate</span>
+                            </div>
+                            <div class="result-item">
+                                <strong>Cost Optimization</strong>
+                                <span>On-demand provisioning saves 80% cloud costs</span>
+                            </div>
+                            <div class="result-item">
+                                <strong>Observability</strong>
+                                <span>Full metrics visibility with alerting</span>
+                            </div>
+                        </div>
+
+                        <h3>Lessons Learned</h3>
+                        <p>Least-privilege webhooks and SCM triggers, clear pipeline observability, and explicit architecture targeting reduce failure modes and speed up recovery. CSRF and reverse proxy patterns recognized as production requirements for security hardening.</p>
+
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> View Repository</a>
+                            <a href="#" class="btn btn-secondary"><i class="fas fa-play"></i> Live Demo (On-Demand)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card upcoming">
+                    <div class="project-header">
+                        <h2><i class="fas fa-dharmachakra"></i> KubeFlow – Kubernetes Orchestration</h2>
+                        <span class="project-status">In Development</span>
+                    </div>
+                    
+                    <div class="project-meta">
+                        <span class="tech-stack">Kubernetes • Helm • ArgoCD • Istio Service Mesh</span>
+                    </div>
+
+                    <div class="project-content">
+                        <p>Expanding the TaskFlow pipeline with Kubernetes deployment, Helm charts, GitOps with ArgoCD, and service mesh implementation for advanced traffic management and security policies.</p>
+                        <div class="coming-soon">
+                            <i class="fas fa-clock"></i>
+                            <span>Case study coming soon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card upcoming">
+                    <div class="project-header">
+                        <h2><i class="fas fa-globe"></i> TerraForm Multi-Cloud</h2>
+                        <span class="project-status">Planned</span>
+                    </div>
+                    
+                    <div class="project-meta">
+                        <span class="tech-stack">Terraform • AWS • Azure • GCP • Multi-Cloud Strategy</span>
+                    </div>
+
+                    <div class="project-content">
+                        <p>Infrastructure as Code implementation across multiple cloud providers with Terraform modules, state management, and disaster recovery strategies.</p>
+                        <div class="coming-soon">
+                            <i class="fas fa-clock"></i>
+                            <span>Case study coming soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DevOps Portfolio. Built with modern web standards and deployed on Cloudflare Pages.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
