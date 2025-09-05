@@ -27,6 +27,7 @@ This portfolio demonstrates real-world DevOps implementations through detailed c
 ## Architecture
 
 The portfolio follows a static site architecture with:
+```
 portfolio-site/
 |-- index.html          # Home page with skills overview
 |-- projects.html       # Detailed project case studies
@@ -36,7 +37,7 @@ portfolio-site/
 |-- css/style.css       # Comprehensive styling
 |-- js/main.js          # Interactive functionality
 `-- README.md           # Project documentation
-
+```
 
 ## Content Strategy
 
